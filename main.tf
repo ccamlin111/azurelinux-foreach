@@ -136,7 +136,7 @@ resource "azurerm_linux_virtual_machine" "main" {
     caching              = "ReadWrite"
   }
 }
-//set your shutdown schedule
+//set your shutdown schedule for each vm
 resource "azurerm_dev_test_global_vm_shutdown_schedule" "main" {
   for_each           = var.vm_map
   virtual_machine_id = azurerm_linux_virtual_machine.main[each.key].id

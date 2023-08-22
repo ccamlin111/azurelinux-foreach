@@ -1,4 +1,4 @@
-//Basic variables.  Can be moved to a tfvars file
+//Basic variables.  Can be moved to a tfvars file if disired
 
 variable "prefix" {
   default     = "K8S81823" //added date after name
